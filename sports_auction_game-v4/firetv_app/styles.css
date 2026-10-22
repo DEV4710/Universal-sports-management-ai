@@ -1,0 +1,488 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: #0d1117;
+  color: #f0f6fc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* THEMES */
+body.theme-cricket {
+  background: radial-gradient(circle at top right, #1a2636, #0b1017);
+}
+body.theme-football {
+  background: radial-gradient(circle at top right, #132a1e, #09140e);
+}
+body.theme-basketball {
+  background: radial-gradient(circle at top right, #381912, #120907);
+}
+
+/* TOP NAV */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-badge {
+  background: linear-gradient(135deg, #ff9900, #ff5500);
+  color: #000;
+  font-weight: 900;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+
+.title-text {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.title-text small {
+  font-size: 11px;
+  color: #8b949e;
+  margin-left: 6px;
+}
+
+.sport-tabs {
+  display: flex;
+  gap: 12px;
+}
+
+.tab-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #c9d1d9;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover, .tab-btn.active {
+  background: #ff9900;
+  color: #000;
+  border-color: #ff9900;
+  box-shadow: 0 0 12px rgba(255, 153, 0, 0.4);
+}
+
+.voice-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  color: #8b949e;
+}
+
+.mic-dot {
+  width: 10px;
+  height: 10px;
+  background: #238636;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #238636;
+}
+
+/* DASHBOARD GRID */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+  padding: 24px 32px;
+  flex: 1;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARDS */
+.card {
+  background: rgba(22, 27, 34, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.user-club-card {
+  border-left: 4px solid #ff9900;
+}
+
+.user-club-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ff9900;
+}
+
+.manager-name {
+  font-size: 13px;
+  color: #8b949e;
+  margin-top: 4px;
+}
+
+.budget-box {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.budget-label {
+  font-size: 10px;
+  color: #8b949e;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.budget-value {
+  font-size: 24px;
+  font-weight: 900;
+  color: #2f81f7;
+  margin-top: 2px;
+}
+
+/* STANDINGS TABLE */
+.standings-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.standings-card h4 {
+  font-size: 13px;
+  color: #8b949e;
+  letter-spacing: 0.5px;
+}
+
+.matchday-badge {
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table-container th, .table-container td {
+  padding: 8px 6px;
+  text-align: left;
+}
+
+.table-container th {
+  color: #8b949e;
+  font-size: 11px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-container td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.table-container tr.user-row {
+  background: rgba(255, 153, 0, 0.15);
+  font-weight: 800;
+  color: #ff9900;
+}
+
+/* CENTER STAGE */
+.mode-toggle {
+  display: flex;
+  gap: 12px;
+}
+
+.toggle-btn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #c9d1d9;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn.active {
+  background: #238636;
+  color: #fff;
+  border-color: #238636;
+  box-shadow: 0 0 14px rgba(35, 134, 54, 0.4);
+}
+
+.stage-container {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stage-container.active {
+  display: flex;
+}
+
+/* LOT CARD */
+.lot-card {
+  border: 1px solid rgba(255, 153, 0, 0.3);
+  position: relative;
+}
+
+.lot-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.lot-number {
+  font-weight: 900;
+  color: #ff9900;
+  font-size: 14px;
+}
+
+.lot-role-badge {
+  background: rgba(47, 129, 247, 0.2);
+  color: #2f81f7;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.player-profile {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.player-avatar {
+  font-size: 56px;
+  background: rgba(0, 0, 0, 0.4);
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.player-info h2 {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.player-stats {
+  font-size: 13px;
+  color: #8b949e;
+  margin-top: 4px;
+}
+
+.rating-bar {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #3fb950;
+}
+
+.bidding-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.bid-label {
+  font-size: 10px;
+  color: #8b949e;
+  font-weight: 800;
+}
+
+.bid-price {
+  font-size: 28px;
+  font-weight: 900;
+  color: #ff9900;
+}
+
+.bidder-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #f0f6fc;
+}
+
+.auction-actions {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  gap: 12px;
+}
+
+.action-btn {
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.bid-btn {
+  background: #ff9900;
+  color: #000;
+}
+
+.bid-btn:hover {
+  background: #e68a00;
+  box-shadow: 0 0 14px rgba(255, 153, 0, 0.5);
+}
+
+.ai-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pass-btn {
+  background: #da3633;
+  color: #fff;
+}
+
+/* TICKER LOG */
+.log-card h4 {
+  font-size: 12px;
+  color: #8b949e;
+  margin-bottom: 12px;
+}
+
+.log-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.log-item {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  border-left: 3px solid #2f81f7;
+}
+
+/* MATCH SIMULATOR */
+.match-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sport-tag {
+  background: rgba(63, 185, 80, 0.2);
+  color: #3fb950;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.tactics-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.tactics-selector select {
+  background: #161b22;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.sim-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #238636, #2ea043);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(35, 134, 54, 0.4);
+}
+
+.match-result-banner {
+  margin-top: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #ff9900;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* SQUAD CARD */
+.roster-list {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.roster-item {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}

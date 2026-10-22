@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Sports Manager AI (v4 Engine)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="theme-cricket">
+
+  <!-- TOP BAR -->
+  <header class="top-nav">
+    <div class="brand">
+      <span class="logo-badge">ALEXA+ AI</span>
+      <span class="title-text">UNIVERSAL SPORTS MANAGER <small>v4.0 REALISM ENGINE</small></span>
+    </div>
+    
+    <div class="sport-tabs">
+      <button class="tab-btn active" onclick="switchSportMode('cricket')">🏏 IPL CRICKET</button>
+      <button class="tab-btn" onclick="switchSportMode('football')">⚽ FOOTBALL MANAGER</button>
+      <button class="tab-btn" onclick="switchSportMode('basketball')">🏀 NBA DRAFT</button>
+    </div>
+
+    <div class="voice-status">
+      <span class="mic-dot"></span>
+      <span id="voiceStatusText">"Alexa, bid ₹15 Cr"</span>
+    </div>
+  </header>
+
+  <!-- MAIN DASHBOARD -->
+  <main class="dashboard-grid">
+
+    <!-- LEFT PANEL: USER CLUB & LEAGUE STANDINGS -->
+    <section class="panel left-panel">
+      <div class="card user-club-card">
+        <h3 id="userTeamTitle">ROYAL CHALLENGERS ALEXA</h3>
+        <p class="manager-name" id="managerName">Manager: Alexa AI</p>
+        <div class="budget-box">
+          <span class="budget-label">REMAINING BUDGET</span>
+          <span class="budget-value" id="userBudgetValue">₹100.0 Cr</span>
+        </div>
+      </div>
+
+      <div class="card standings-card">
+        <div class="card-header">
+          <h4 id="leagueTitle">IPL 2026 LEAGUE STANDINGS</h4>
+          <span class="matchday-badge" id="matchdayBadge">MD 1/14</span>
+        </div>
+        <div class="table-container">
+          <table id="standingsTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Club</th>
+                <th>P</th>
+                <th>W</th>
+                <th>L</th>
+                <th>PTS</th>
+              </tr>
+            </thead>
+            <tbody id="standingsBody">
+              <!-- Dynamic Rows -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENTER PANEL: AUCTION & MATCH SIMULATOR STAGE -->
+    <section class="panel center-panel">
+      
+      <!-- MODE SWITCHER TOGGLE -->
+      <div class="mode-toggle">
+        <button class="toggle-btn active" onclick="showStage('auctionStage')">🔨 REAL-TIME AUCTION</button>
+        <button class="toggle-btn" onclick="showStage('matchStage')">⚽ MATCHDAY SIMULATOR</button>
+        <button class="toggle-btn" onclick="showStage('squadStage')">📋 TACTICAL BOARD</button>
+      </div>
+
+      <!-- 1. AUCTION STAGE -->
+      <div id="auctionStage" class="stage-container active">
+        <div class="card lot-card" id="lotCard">
+          <div class="lot-header">
+            <span class="lot-number" id="lotNumber">LOT #1</span>
+            <span class="lot-role-badge" id="playerRole">FAST BOWLER</span>
+          </div>
+
+          <div class="player-profile">
+            <div class="player-avatar" id="playerAvatar">🏏</div>
+            <div class="player-info">
+              <h2 id="playerName">Jasprit Bumrah</h2>
+              <p class="player-stats" id="playerStats">165 Wkts | 6.5 Econ | 133 Matches</p>
+              <div class="rating-bar">
+                <span>OVR RATING: <strong id="playerRating">96</strong></span>
+                <span>EST. VALUATION: <strong id="playerValuation">₹16.5 Cr</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bidding-dashboard">
+            <div class="bid-box">
+              <span class="bid-label">CURRENT HIGHEST BID</span>
+              <span class="bid-price" id="currentBidPrice">₹2.0 Cr</span>
+            </div>
+            <div class="bidder-box">
+              <span class="bid-label">LEADING BIDDER</span>
+              <span class="bidder-name" id="highestBidderName">Base Price</span>
+            </div>
+          </div>
+
+          <!-- VOICE & ACTION CONTROLS -->
+          <div class="auction-actions">
+            <button class="action-btn bid-btn" onclick="userPlaceBid()">🙋♂️ PLACE VOICE BID (+₹0.5 Cr)</button>
+            <button class="action-btn ai-btn" onclick="triggerAiBidStep()">🤖 RIVAL AI BID STEP</button>
+            <button class="action-btn pass-btn" onclick="finalizeLot()">🔨 SELL / NEXT LOT</button>
+          </div>
+        </div>
+
+        <!-- REAL-TIME AUCTION TICKER LOG -->
+        <div class="card log-card">
+          <h4>LIVE AUCTION TICKER & AI RIVAL LOGS</h4>
+          <div class="log-stream" id="auctionLogStream">
+            <!-- Dynamic Logs -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. MATCH SIMULATOR STAGE -->
+      <div id="matchStage" class="stage-container">
+        <div class="card match-card">
+          <div class="match-header">
+            <h3 id="matchStageTitle">SEASON MATCHDAY SIMULATOR</h3>
+            <span class="sport-tag" id="matchSportTag">Cricket T20 League</span>
+          </div>
+
+          <div class="tactics-selector">
+            <label>MATCH TACTICS:</label>
+            <select id="tacticsSelect" onchange="updateTactics()">
+              <option value="Balanced">Balanced Strategy</option>
+              <option value="Aggressive">Aggressive / All-Out Attack</option>
+              <option value="Counter / Defensive">Defensive / Counter-Attack</option>
+            </select>
+          </div>
+
+          <div class="match-sim-box">
+            <button class="sim-btn" onclick="simulateMatchDay()">⚔️ SIMULATE NEXT MATCHDAY</button>
+            <div class="match-result-banner" id="matchResultBanner">
+              Click above to run realistic matchday simulation based on your squad & AI rival ratings!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. SQUAD & TACTICS STAGE -->
+      <div id="squadStage" class="stage-container">
+        <div class="card squad-card">
+          <h3>SQUAD ROSTER & FORMATION</h3>
+          <p class="formation-text">FORMATION: <strong id="formationText">4-3-3 Attacking</strong></p>
+          <div class="roster-list" id="rosterList">
+            <!-- Dynamic Roster -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+{
+  "cricket": {
+    "currency": "₹",
+    "unit": "Cr",
+    "teams": [
+      {"id": "rcb", "name": "Royal Challengers Alexa", "budget": 100.0, "is_user": true},
+      {"id": "mi", "name": "Mumbai AI Champions", "budget": 95.0, "is_user": false},
+      {"id": "csk", "name": "Chennai Super Bots", "budget": 98.0, "is_user": false},
+      {"id": "kkr", "name": "Kolkata Cloud Knights", "budget": 92.0, "is_user": false},
+      {"id": "gt", "name": "Gujarat Tech Giants", "budget": 90.0, "is_user": false},
+      {"id": "rr", "name": "Rajasthan Cyber Royals", "budget": 88.0, "is_user": false}
+    ],
+    "players": [
+      {"id": "c1", "name": "Jasprit Bumrah", "role": "Fast Bowler", "rating": 96, "base_price": 2.0, "valuation": 16.5, "stats": "165 Wkts | 6.5 Econ | 133 Matches"},
+      {"id": "c2", "name": "Virat Kohli", "role": "Top-Order Batter", "rating": 95, "base_price": 2.0, "valuation": 18.0, "stats": "8,000+ Runs | 8 IPL 100s"},
+      {"id": "c3", "name": "Heinrich Klaasen", "role": "Wicketkeeper Batter", "rating": 92, "base_price": 1.5, "valuation": 14.0, "stats": "SR 175.5 | 42 Sixes in 2024"},
+      {"id": "c4", "name": "Rashid Khan", "role": "Spin All-Rounder", "rating": 94, "base_price": 2.0, "valuation": 15.0, "stats": "149 Wkts | 6.7 Econ | SR 155"},
+      {"id": "c5", "name": "Travis Head", "role": "Aggressive Opener", "rating": 91, "base_price": 1.5, "valuation": 12.5, "stats": "567 Runs | SR 191.5 in 2024"},
+      {"id": "c6", "name": "Pat Cummins", "role": "Pace All-Rounder & Captain", "rating": 93, "base_price": 2.0, "valuation": 17.0, "stats": "68 Wkts | SR 142 | IPL Winner"},
+      {"id": "c7", "name": "Rishabh Pant", "role": "Wicketkeeper Captain", "rating": 93, "base_price": 2.0, "valuation": 16.0, "stats": "3,284 Runs | SR 148.5"},
+      {"id": "c8", "name": "Sunil Narine", "role": "Spin All-Rounder", "rating": 90, "base_price": 1.5, "valuation": 11.5, "stats": "180 Wkts | 100s as Opener"}
+    ]
+  },
+  "football": {
+    "currency": "€",
+    "unit": "M",
+    "teams": [
+      {"id": "rca", "name": "Royal Alexa FC", "budget": 180.0, "is_user": true},
+      {"id": "mcfc", "name": "Cyber City FC", "budget": 220.0, "is_user": false},
+      {"id": "rm", "name": "Real AI Madrid", "budget": 250.0, "is_user": false},
+      {"id": "fcb", "name": "Barca Neural", "budget": 160.0, "is_user": false},
+      {"id": "bay", "name": "Bayern Synth", "budget": 190.0, "is_user": false},
+      {"id": "psg", "name": "Paris DeepMind", "budget": 240.0, "is_user": false}
+    ],
+    "players": [
+      {"id": "f1", "name": "Erling Haaland", "role": "Striker (ST)", "rating": 94, "base_price": 90.0, "valuation": 175.0, "stats": "85 Goals in 88 PL Matches"},
+      {"id": "f2", "name": "Jude Bellingham", "role": "Attacking Midfielder (CAM)", "rating": 93, "base_price": 85.0, "valuation": 160.0, "stats": "23 Goals & 12 Assists in 2024"},
+      {"id": "f3", "name": "Kylian Mbappé", "role": "Left Winger (LW)", "rating": 95, "base_price": 100.0, "valuation": 180.0, "stats": "256 Goals | World Cup Golden Boot"},
+      {"id": "f4", "name": "Rodri", "role": "Defensive Midfielder (CDM)", "rating": 92, "base_price": 70.0, "valuation": 120.0, "stats": "Ballon d'Or Winner | 93% Pass Acc"},
+      {"id": "f5", "name": "Virgil van Dijk", "role": "Center Back (CB)", "rating": 90, "base_price": 50.0, "valuation": 75.0, "stats": "78% Aerial Duels Won | Captain"},
+      {"id": "f6", "name": "Lamine Yamal", "role": "Right Winger (RW)", "rating": 89, "base_price": 60.0, "valuation": 130.0, "stats": "Euros Young Player of Tournament"},
+      {"id": "f7", "name": "Thibaut Courtois", "role": "Goalkeeper (GK)", "rating": 91, "base_price": 45.0, "valuation": 65.0, "stats": "81% Save Ratio | Champions League Winner"},
+      {"id": "f8", "name": "Kevin De Bruyne", "role": "Central Midfielder (CM)", "rating": 91, "base_price": 55.0, "valuation": 80.0, "stats": "112 Premier League Assists"}
+    ]
+  },
+  "basketball": {
+    "currency": "$",
+    "unit": "M",
+    "teams": [
+      {"id": "lak", "name": "LA Alexa Lakers", "budget": 140.0, "is_user": true},
+      {"id": "bos", "name": "Boston Cyber Celtics", "budget": 150.0, "is_user": false},
+      {"id": "gsw", "name": "Golden State Synth", "budget": 145.0, "is_user": false},
+      {"id": "den", "name": "Denver Neural Nuggets", "budget": 135.0, "is_user": false},
+      {"id": "dal", "name": "Dallas AI Mavericks", "budget": 130.0, "is_user": false},
+      {"id": "sas", "name": "San Antonio Spurs AI", "budget": 125.0, "is_user": false}
+    ],
+    "players": [
+      {"id": "b1", "name": "Nikola Jokić", "role": "Center (C)", "rating": 97, "base_price": 35.0, "valuation": 55.0, "stats": "26.4 PPG | 12.4 RPG | 9.0 APG (3x MVP)"},
+      {"id": "b2", "name": "Luka Dončić", "role": "Point Guard (PG)", "rating": 95, "base_price": 32.0, "valuation": 52.0, "stats": "33.9 PPG | 9.2 RPG | 9.8 APG"},
+      {"id": "b3", "name": "Victor Wembanyama", "role": "Power Forward (PF)", "rating": 92, "base_price": 25.0, "valuation": 50.0, "stats": "21.4 PPG | 10.6 RPG | 3.6 BPG"},
+      {"id": "b4", "name": "Giannis Antetokounmpo", "role": "Power Forward (PF)", "rating": 96, "base_price": 34.0, "valuation": 54.0, "stats": "30.4 PPG | 11.5 RPG | 6.5 APG"},
+      {"id": "b5", "name": "Shai Gilgeous-Alexander", "role": "Shooting Guard (SG)", "rating": 94, "base_price": 30.0, "valuation": 48.0, "stats": "30.1 PPG | 5.5 RPG | 6.2 APG | 2.0 SPG"},
+      {"id": "b6", "name": "Jayson Tatum", "role": "Small Forward (SF)", "rating": 93, "base_price": 28.0, "valuation": 46.0, "stats": "26.9 PPG | 8.1 RPG | NBA Champion"},
+      {"id": "b7", "name": "Stephen Curry", "role": "Point Guard (PG)", "rating": 92, "base_price": 28.0, "valuation": 42.0, "stats": "3,700+ 3-Pointers | 4x NBA Champion"},
+      {"id": "b8", "name": "Anthony Edwards", "role": "Shooting Guard (SG)", "rating": 91, "base_price": 24.0, "valuation": 44.0, "stats": "25.9 PPG | 5.4 RPG | Olympic Gold"}
+    ]
+  }
+}
