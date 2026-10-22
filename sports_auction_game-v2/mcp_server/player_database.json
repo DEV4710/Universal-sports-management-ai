@@ -1,0 +1,39 @@
+{
+  "cricket": {
+    "mode": "IPL Auction",
+    "teams": ["Royal Challengers Alexa", "Mumbai Indians", "Chennai Super Kings", "Kolkata Knight Riders"],
+    "roster_size": 11,
+    "players": [
+      {"id": "c1", "name": "Jasprit Bumrah", "role": "Fast Bowler", "base_price_cr": 2.0, "rating": 96, "stats": {"wickets": 165, "economy": 6.5}, "status": "Available"},
+      {"id": "c2", "name": "Virat Kohli", "role": "Batter", "base_price_cr": 2.0, "rating": 95, "stats": {"runs": 8008, "average": 38.8}, "status": "Available"},
+      {"id": "c3", "name": "Rashid Khan", "role": "Spin Bowler", "base_price_cr": 2.0, "rating": 94, "stats": {"wickets": 149, "economy": 6.7}, "status": "Available"},
+      {"id": "c4", "name": "Heinrich Klaasen", "role": "Wicketkeeper Batter", "base_price_cr": 1.5, "rating": 92, "stats": {"strike_rate": 168.3}, "status": "Available"},
+      {"id": "c5", "name": "Pat Cummins", "role": "All-Rounder", "base_price_cr": 2.0, "rating": 93, "stats": {"wickets": 65, "runs": 520}, "status": "Available"},
+      {"id": "c6", "name": "Travis Head", "role": "Batter", "base_price_cr": 1.5, "rating": 91, "stats": {"strike_rate": 172.5}, "status": "Available"}
+    ]
+  },
+  "football": {
+    "mode": "Transfer Window",
+    "teams": ["Alexa City FC", "Real Madrid", "Arsenal", "Bayern Munich"],
+    "roster_size": 11,
+    "players": [
+      {"id": "f1", "name": "Erling Haaland", "role": "Forward", "market_value_m": 180, "release_clause_m": 200, "weekly_wage_k": 375, "rating": 94, "stats": {"goals": 38, "pace": 89, "shooting": 93}, "status": "Available"},
+      {"id": "f2", "name": "Jude Bellingham", "role": "Midfielder", "market_value_m": 180, "release_clause_m": 220, "weekly_wage_k": 320, "rating": 95, "stats": {"passing": 90, "dribbling": 92, "physical": 88}, "status": "Available"},
+      {"id": "f3", "name": "Kylian Mbappé", "role": "Forward", "market_value_m": 180, "release_clause_m": 210, "weekly_wage_k": 400, "rating": 95, "stats": {"pace": 97, "dribbling": 94, "shooting": 92}, "status": "Available"},
+      {"id": "f4", "name": "Rodri", "role": "Midfielder", "market_value_m": 130, "release_clause_m": 150, "weekly_wage_k": 280, "rating": 93, "stats": {"defending": 91, "passing": 93, "physical": 89}, "status": "Available"},
+      {"id": "f5", "name": "Bukayo Saka", "role": "Forward", "market_value_m": 140, "release_clause_m": 160, "weekly_wage_k": 250, "rating": 91, "stats": {"pace": 88, "dribbling": 90, "shooting": 86}, "status": "Available"}
+    ]
+  },
+  "basketball": {
+    "mode": "NBA Draft & Free Agency",
+    "teams": ["Alexa Ballers", "LA Lakers", "Boston Celtics", "Golden State Warriors"],
+    "roster_size": 5,
+    "players": [
+      {"id": "b1", "name": "Victor Wembanyama", "role": "Center", "draft_projection": "Pick 1", "salary_m": 12.5, "rating": 95, "stats": {"blocks": 3.6, "points": 21.4, "defense": 97}, "status": "Draft Pool"},
+      {"id": "b2", "name": "Nikola Jokić", "role": "Center", "draft_projection": "Superstar FA", "salary_m": 51.4, "rating": 97, "stats": {"assists": 9.8, "rebounds": 12.4, "points": 26.4}, "status": "Available"},
+      {"id": "b3", "name": "Luka Dončić", "role": "Point Guard", "draft_projection": "Superstar FA", "salary_m": 43.0, "rating": 96, "stats": {"points": 33.9, "assists": 9.8, "3pt": 91}, "status": "Available"},
+      {"id": "b4", "name": "Anthony Edwards", "role": "Shooting Guard", "draft_projection": "Superstar FA", "salary_m": 35.5, "rating": 93, "stats": {"points": 25.9, "athleticism": 96, "defense": 88}, "status": "Available"},
+      {"id": "b5", "name": "Cooper Flagg", "role": "Power Forward", "draft_projection": "Pick 2 (Rookie)", "salary_m": 9.8, "rating": 88, "stats": {"potential": 98, "defense": 92, "inside": 89}, "status": "Draft Pool"}
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC / NBA / IPL Alexa+ Ultimate Sports Manager AI</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="tv-container">
+    <!-- Top Bar Navigation & Status -->
+    <header class="top-nav">
+      <div class="brand">
+        <span class="alexa-badge">ALEXA+ AI VOICE POWERED</span>
+        <h1>UNIVERSAL SPORTS MANAGER</h1>
+      </div>
+      
+      <div class="sport-switcher">
+        <button class="sport-btn active" id="btn-cricket" onclick="switchSport('cricket')">🏏 Cricket (IPL Auction)</button>
+        <button class="sport-btn" id="btn-football" onclick="switchSport('football')">⚽ Football (Transfers)</button>
+        <button class="sport-btn" id="btn-basketball" onclick="switchSport('basketball')">🏀 Basketball (NBA Draft)</button>
+      </div>
+
+      <div class="club-status">
+        <div class="status-item">
+          <span class="label">CLUB</span>
+          <span class="value" id="ui-team-name">Royal Challengers Alexa</span>
+        </div>
+        <div class="status-item highlight">
+          <span class="label">BUDGET</span>
+          <span class="value" id="ui-budget">₹100.0Cr</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main 3-Column Dashboard -->
+    <main class="dashboard-grid">
+      <!-- Column 1: Market & Player Stage (Auction / Transfer / Draft) -->
+      <section class="card market-card">
+        <div class="card-header">
+          <h2 id="market-title">🔥 IPL LIVE AUCTION STAGE</h2>
+          <span class="live-pill">LIVE VOICE AGENT</span>
+        </div>
+        
+        <div class="player-feature" id="player-feature">
+          <div class="player-avatar" id="p-avatar">🏏</div>
+          <div class="player-info">
+            <h3 id="p-name">Jasprit Bumrah</h3>
+            <p id="p-role">Fast Bowler • Rating: 96</p>
+            <div class="stats-pills" id="p-stats">
+              <span>Wickets: 165</span>
+              <span>Econ: 6.5</span>
+            </div>
+          </div>
+          <div class="bid-box">
+            <span class="bid-label">CURRENT BID</span>
+            <span class="bid-amount" id="p-price">₹2.0Cr</span>
+          </div>
+        </div>
+
+        <div class="acquisition-controls">
+          <button class="action-btn bid-btn" onclick="triggerAction('bid')">🎙️ "Alexa, place bid / submit offer"</button>
+          <button class="action-btn sim-btn" onclick="triggerAction('sim_match')">⚽ "Alexa, simulate match"</button>
+        </div>
+
+        <div class="available-pool">
+          <h4>AVAILABLE PLAYERS IN MARKET</h4>
+          <div class="pool-list" id="pool-list">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Column 2: Tactical Pitch & Squad Builder -->
+      <section class="card squad-card">
+        <div class="card-header">
+          <h2>📋 SQUAD & TACTICAL FORMATION</h2>
+          <span class="badge" id="ui-formation">4-3-3</span>
+        </div>
+
+        <div class="tactics-bar">
+          <span>STYLE: <strong id="ui-style">Balanced Attack</strong></span>
+          <span>CAPTAIN: <strong id="ui-captain">Jasprit Bumrah</strong></span>
+        </div>
+
+        <div class="pitch-visualizer" id="pitch-visualizer">
+          <div class="pitch-overlay">
+            <div class="field-line penalty-area"></div>
+            <div class="field-line center-circle"></div>
+          </div>
+          <div class="squad-grid" id="squad-grid">
+            <div class="empty-squad-msg">No players signed yet. Use Alexa+ Voice commands to bid or sign players!</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Column 3: Club Management & Voice Feed -->
+      <section class="card club-card">
+        <div class="card-header">
+          <h2>🏰 CLUB MANAGEMENT & FACILITIES</h2>
+        </div>
+
+        <div class="club-stats-grid">
+          <div class="facility-box">
+            <span class="fac-label">STADIUM CAPACITY</span>
+            <span class="fac-val" id="ui-stadium">50,000 Seats</span>
+          </div>
+          <div class="facility-box">
+            <span class="fac-label">TRAINING COMPLEX</span>
+            <span class="fac-val" id="ui-training">Tier 3 Advanced</span>
+          </div>
+          <div class="facility-box">
+            <span class="fac-label">YOUTH ACADEMY</span>
+            <span class="fac-val" id="ui-youth">Tier 2 Regional</span>
+          </div>
+          <div class="facility-box">
+            <span class="fac-label">SQUAD MORALE</span>
+            <span class="fac-val highlight-green" id="ui-morale">High (92%)</span>
+          </div>
+        </div>
+
+        <div class="voice-log-section">
+          <h3>🎙️ ALEXA+ REAL-TIME COMMENTARY FEED</h3>
+          <div class="voice-logs" id="voice-logs">
+            <div class="log-entry">Session started. Alexa+ Agent Skill connected to Fire TV over MCP 2025-11-25 protocol.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Voice Action Helper Footer -->
+    <footer class="voice-helper-footer">
+      <div class="voice-pulse"></div>
+      <div class="voice-prompt">
+        <span class="prompt-tag">TRY VOICE COMMANDS:</span>
+        <span class="prompt-text">"Alexa, bid ₹12 Crore on Jasprit Bumrah" • "Alexa, submit €180M offer for Erling Haaland" • "Alexa, draft Victor Wembanyama" • "Alexa, set formation 4-3-3"</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
