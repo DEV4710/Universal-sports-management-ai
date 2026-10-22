@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Manager AI 2026 - Alexa+ & Fire TV Career Mode</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Teko:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="firetv-theme">
+    <div id="app-container">
+
+        <!-- VOICE ASSISTANT OVERLAY TICKER -->
+        <div id="alexa-voice-bar" class="voice-bar">
+            <div class="alexa-orb-container">
+                <div class="alexa-orb"></div>
+            </div>
+            <div class="voice-text-content">
+                <span id="voice-status-title" class="voice-title">ALEXA+ AI SPORTS ENGINE</span>
+                <span id="voice-status-text" class="voice-sub">Listening for voice commands... Try saying "Alexa, start IPL Auction" or "Alexa, bid 15 Crore"</span>
+            </div>
+            <div class="mcp-badge">MCP ONLINE (2025-11-25)</div>
+        </div>
+
+        <!-- SCREEN 1: TITLE / START SCREEN -->
+        <section id="screen-title" class="screen active">
+            <div class="hero-backdrop"></div>
+            <div class="title-content">
+                <div class="badge-tag">OFFICIAL AMAZON DEVELOPER HACKATHON ENTRY</div>
+                <h1 class="main-logo">SPORTS MANAGER <span class="accent-text">AI 2026</span></h1>
+                <p class="subtitle">The Living Room Career Engine • Powered by Fire TV & Alexa+ Model Context Protocol</p>
+                <div class="sports-badge-row">
+                    <span class="badge cricket">🏏 IPL CRICKET MEGA AUCTION</span>
+                    <span class="badge football">⚽ PREMIER LEAGUE & CHAMPIONS CUP</span>
+                    <span class="badge basketball">🏀 NBA DRAFT & FREE AGENCY</span>
+                </div>
+                <div class="cta-container">
+                    <button id="btn-start-game" class="btn-primary tv-focusable" onclick="navigateTo('screen-sport-select')">
+                        🚀 PRESS START CAREER MODE
+                    </button>
+                    <p class="voice-hint">Or say: <em>"Alexa, launch Universal Sports Manager"</em></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: SPORT SELECTION -->
+        <section id="screen-sport-select" class="screen">
+            <div class="section-header">
+                <h2>CHOOSE YOUR SPORT & CAREER MODE</h2>
+                <p>Each sport offers authentic acquisition rules, full season leagues, and AI rival owners.</p>
+            </div>
+            <div class="sport-cards-grid">
+                <!-- CRICKET CARD -->
+                <div class="sport-card tv-focusable" onclick="selectSport('cricket')">
+                    <div class="sport-icon">🏏</div>
+                    <h3>IPL CRICKET</h3>
+                    <p class="mode-desc">IPL Mega Auction, Squad Building, 14-Match League + Playoffs, Orange & Purple Cap tracking.</p>
+                    <div class="sport-tag">AUCTION MODE</div>
+                </div>
+
+                <!-- FOOTBALL CARD -->
+                <div class="sport-card tv-focusable" onclick="selectSport('football')">
+                    <div class="sport-icon">⚽</div>
+                    <h3>FOOTBALL MANAGER</h3>
+                    <p class="mode-desc">Transfer Window, European Champions League, 38-Match League, 4-3-3 Pitch Tactics.</p>
+                    <div class="sport-tag">TRANSFER WINDOW</div>
+                </div>
+
+                <!-- BASKETBALL CARD -->
+                <div class="sport-card tv-focusable" onclick="selectSport('basketball')">
+                    <div class="sport-icon">🏀</div>
+                    <h3>NBA FRANCHISE</h3>
+                    <p class="mode-desc">NBA Draft, Free Agency, Salary Cap, 82-Game Season & NBA Playoffs simulation.</p>
+                    <div class="sport-tag">DRAFT & FREE AGENCY</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: TEAM & MANAGER SETUP -->
+        <section id="screen-team-select" class="screen">
+            <div class="section-header">
+                <h2 id="team-select-title">SELECT YOUR CLUB & FRANCHISE</h2>
+                <p>Choose your starting team and customize your manager profile.</p>
+            </div>
+            <div class="setup-layout">
+                <div class="team-list-container">
+                    <div id="team-cards-list" class="team-grid"></div>
+                </div>
+                <div class="manager-form-card">
+                    <h3>MANAGER PROFILE</h3>
+                    <div class="form-group">
+                        <label>Manager Name</label>
+                        <input type="text" id="manager-name-input" value="Coach Alexa" class="tv-input">
+                    </div>
+                    <div class="form-group">
+                        <label>AI Rival Difficulty</label>
+                        <select id="difficulty-select" class="tv-select">
+                            <option value="Tactical AI (Hard)">Tactical AI (Hard)</option>
+                            <option value="Aggressive AI (Medium)">Aggressive AI (Medium)</option>
+                            <option value="Relaxed AI (Easy)">Relaxed AI (Easy)</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary full-width tv-focusable" onclick="confirmTeamSetup()">
+                        ⚡ START CAREER SEASON
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 4: MAIN MANAGER HUB / DASHBOARD -->
+        <section id="screen-hub" class="screen">
+            <div class="hub-header">
+                <div class="manager-badge">
+                    <span id="hub-manager-name" class="name">Coach Alexa</span>
+                    <span id="hub-team-name" class="club">Royal Challengers Alexa</span>
+                </div>
+                <div class="nav-tabs">
+                    <button class="tab-btn active tv-focusable" onclick="showHubTab('hub-overview')">HUB OVERVIEW</button>
+                    <button class="tab-btn tv-focusable" onclick="showHubTab('hub-acquisition')">MARKET / AUCTION</button>
+                    <button class="tab-btn tv-focusable" onclick="showHubTab('hub-tactics')">SQUAD & TACTICS</button>
+                    <button class="tab-btn tv-focusable" onclick="showHubTab('hub-match')">PLAY / SIMULATE MATCH</button>
+                    <button class="tab-btn tv-focusable" onclick="showHubTab('hub-standings')">LEAGUE STANDINGS</button>
+                </div>
+                <div class="financial-badge">
+                    <span class="label">TRANSFER BUDGET</span>
+                    <span id="hub-budget-val" class="val">₹100.0 Cr</span>
+                </div>
+            </div>
+
+            <!-- TAB 1: HUB OVERVIEW -->
+            <div id="hub-overview" class="hub-tab-content active">
+                <div class="hub-dashboard-grid">
+                    <div class="widget-card big">
+                        <h3>NEXT UPCOMING FIXTURE</h3>
+                        <div class="fixture-banner">
+                            <div class="team-side home">
+                                <span id="fix-home-name" class="team-title">Royal Challengers Alexa</span>
+                                <span class="badge-role">HOME</span>
+                            </div>
+                            <div class="vs-circle">VS</div>
+                            <div class="team-side away">
+                                <span id="fix-away-name" class="team-title">Mumbai AI</span>
+                                <span class="badge-role">AWAY</span>
+                            </div>
+                        </div>
+                        <div class="fixture-details">
+                            <span>📅 Matchday <strong id="hub-matchday-num">1</strong> / <span id="hub-total-matchdays">14</span></span>
+                            <span>🏆 League Competition</span>
+                            <span>🏟️ Packed TV Broadcast Stadium</span>
+                        </div>
+                        <button class="btn-accent tv-focusable" onclick="showHubTab('hub-match')">
+                            ▶ GO TO MATCH SIMULATOR
+                        </button>
+                    </div>
+
+                    <div class="widget-card">
+                        <h3>CLUB METRICS</h3>
+                        <div class="metric-row">
+                            <span>Squad Rating</span>
+                            <span id="metric-rating" class="highlight">88 OVERALL</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Squad Size</span>
+                            <span id="metric-squad-count">11 Players</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Board Expectations</span>
+                            <span class="success">Qualify for Finals</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Team Morale</span>
+                            <span class="success">🔥 High (95%)</span>
+                        </div>
+                    </div>
+
+                    <div class="widget-card">
+                        <h3>ALEXA+ AI ASSISTANT FEED</h3>
+                        <ul id="alexa-feed-list" class="feed-list">
+                            <li>🤖 "MCP Server initialized for 2026 Season."</li>
+                            <li>💡 "Recommendation: Acquire a premium Fast Bowler in the auction."</li>
+                            <li>🗣️ Try saying: <em>"Alexa, set formation to 4-3-3 Attacking"</em></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: ACQUISITION / AUCTION ROOM -->
+            <div id="hub-acquisition" class="hub-tab-content">
+                <div class="auction-broadcast-layout">
+                    <div class="broadcast-stage">
+                        <div class="stage-header">
+                            <span id="acq-mode-label" class="live-pill">🔴 LIVE IPL MEGA AUCTION STAGE</span>
+                            <span class="timer-pill">LOT #04 • FAST BOWLER CATEGORY</span>
+                        </div>
+                        <div class="player-spotlight">
+                            <div id="acq-player-avatar" class="player-avatar">⚡</div>
+                            <div class="player-info">
+                                <h2 id="acq-player-name">Jasprit Bumrah</h2>
+                                <p id="acq-player-role">Fast Bowler • India National Team</p>
+                                <div id="acq-player-stats-grid" class="mini-stats-grid">
+                                    <div class="stat-box"><span>Rating</span><strong id="acq-stat-rating">96</strong></div>
+                                    <div class="stat-box"><span>Wickets</span><strong id="acq-stat-1">165</strong></div>
+                                    <div class="stat-box"><span>Economy</span><strong id="acq-stat-2">6.5</strong></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bidding-control-zone">
+                            <div class="bid-display">
+                                <div class="bid-box">
+                                    <span class="label">CURRENT HIGHEST BID</span>
+                                    <span id="acq-curr-bid" class="amount">₹2.0 Cr</span>
+                                </div>
+                                <div class="bid-box">
+                                    <span class="label">HIGHEST BIDDER</span>
+                                    <span id="acq-curr-bidder" class="bidder-name">Base Price</span>
+                                </div>
+                            </div>
+
+                            <div class="action-buttons-row">
+                                <button class="btn-bid tv-focusable" onclick="placeVoiceBid(0.5)">+ ₹0.5 Cr BID</button>
+                                <button class="btn-bid tv-focusable" onclick="placeVoiceBid(1.0)">+ ₹1.0 Cr BID</button>
+                                <button class="btn-bid tv-focusable" onclick="placeVoiceBid(2.0)">+ ₹2.0 Cr BID</button>
+                                <button class="btn-accent tv-focusable" onclick="signCurrentPlayer()">SIGN PLAYER TO SQUAD</button>
+                            </div>
+                            <p class="voice-hint">🗣️ Voice bidding active: Say <em>"Alexa, bid ₹12 Crore on Bumrah"</em></p>
+                        </div>
+                    </div>
+
+                    <div class="broadcast-side-log">
+                        <h3>LIVE BIDDING TICKER</h3>
+                        <div id="bidding-logs-container" class="log-ticker">
+                            <p class="log-entry">Auction stage open. Base price set at ₹2.0 Cr.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: SQUAD & TACTICS -->
+            <div id="hub-tactics" class="hub-tab-content">
+                <div class="tactics-layout">
+                    <div class="pitch-container">
+                        <div class="pitch-header">
+                            <span id="pitch-sport-label">TACTICAL FORMATION BOARD</span>
+                            <div class="tactics-selectors">
+                                <select id="formation-select" class="tv-select" onchange="updateTactics()">
+                                    <option value="4-3-3">4-3-3 Attacking Pitch</option>
+                                    <option value="4-2-3-1">4-2-3-1 Balanced Pitch</option>
+                                    <option value="3-5-2">3-5-2 Counter Attack</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="tactical-field" class="sports-pitch football-pitch">
+                            <!-- Tactical Nodes injected dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="squad-panel">
+                        <h3>ACTIVE ROSTER & RESERVES</h3>
+                        <div id="squad-list-container" class="roster-list"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: MATCH SIMULATOR -->
+            <div id="hub-match" class="hub-tab-content">
+                <div class="match-broadcast-layout">
+                    <div class="scoreboard-bar">
+                        <div class="team-score-card home">
+                            <span id="sim-home-name" class="team-name">Royal Challengers Alexa</span>
+                            <span id="sim-home-score" class="score">0</span>
+                        </div>
+                        <div class="match-time-badge">
+                            <span id="sim-match-time" class="time">00:00</span>
+                            <span id="sim-match-status" class="status-pill">READY</span>
+                        </div>
+                        <div class="team-score-card away">
+                            <span id="sim-away-score" class="score">0</span>
+                            <span id="sim-away-name" class="team-name">Mumbai AI</span>
+                        </div>
+                    </div>
+
+                    <div class="simulation-screen">
+                        <div class="stadium-graphic">
+                            <div class="pitch-light"></div>
+                            <div class="center-banner">LIVE TELEVISION BROADCAST</div>
+                        </div>
+
+                        <div id="match-commentary-box" class="commentary-box">
+                            <p class="comm-line intro">🎙️ Welcome to the live match simulation. Both teams are on the field.</p>
+                        </div>
+                    </div>
+
+                    <div class="match-controls">
+                        <button id="btn-start-sim" class="btn-primary tv-focusable" onclick="startMatchSimulation()">
+                            ▶ START MATCH SIMULATION
+                        </button>
+                        <button class="btn-bid tv-focusable" onclick="sendVoiceTacticalCommand('Attacking')">
+                            🗣️ "Alexa, go All-Out Attack"
+                        </button>
+                        <button class="btn-bid tv-focusable" onclick="sendVoiceTacticalCommand('Defensive')">
+                            🗣️ "Alexa, Park the Bus"
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 5: LEAGUE STANDINGS -->
+            <div id="hub-standings" class="hub-tab-content">
+                <div class="standings-card">
+                    <h3 id="standings-league-title">OFFICIAL LEAGUE STANDINGS 2026</h3>
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>POS</th>
+                                <th>CLUB / FRANCHISE</th>
+                                <th>P</th>
+                                <th>W</th>
+                                <th>D/L</th>
+                                <th>PTS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="standings-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

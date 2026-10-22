@@ -1,0 +1,55 @@
+{
+  "cricket": {
+    "teams": [
+      {"id": "rcb", "name": "Royal Challengers Alexa", "short": "RCA", "budget_cr": 100.0, "rating": 88, "color": "#EC1C24", "secondary": "#000000"},
+      {"id": "mi", "name": "Mumbai AI", "short": "MAI", "budget_cr": 95.0, "rating": 91, "color": "#004BA0", "secondary": "#D1AB3E"},
+      {"id": "csk", "name": "Chennai Super Kings", "short": "CSK", "budget_cr": 90.0, "rating": 90, "color": "#FCCA06", "secondary": "#00529B"},
+      {"id": "kkr", "name": "Kolkata Knight Riders", "short": "KKR", "budget_cr": 98.0, "rating": 87, "color": "#3A225D", "secondary": "#B3A125"},
+      {"id": "gt", "name": "Gujarat Titans", "short": "GT", "budget_cr": 92.0, "rating": 89, "color": "#1B2133", "secondary": "#C8A153"},
+      {"id": "dc", "name": "Delhi Capitals", "short": "DC", "budget_cr": 96.0, "rating": 86, "color": "#00008B", "secondary": "#FF0000"}
+    ],
+    "auction_pool": [
+      {"id": "c1", "name": "Jasprit Bumrah", "role": "Fast Bowler", "nation": "India", "rating": 96, "base_price_cr": 2.0, "stats": {"matches": 133, "wickets": 165, "economy": 6.5, "avg": 22.4}, "image": "⚡"},
+      {"id": "c2", "name": "Virat Kohli", "role": "Top-Order Batter", "nation": "India", "rating": 95, "base_price_cr": 2.0, "stats": {"matches": 252, "runs": 8004, "avg": 38.7, "sr": 131.9}, "image": "👑"},
+      {"id": "c3", "name": "Heinrich Klaasen", "role": "Wicketkeeper Batter", "nation": "South Africa", "rating": 92, "base_price_cr": 2.0, "stats": {"matches": 98, "runs": 2850, "sr": 168.2, "sixes": 142}, "image": "💥"},
+      {"id": "c4", "name": "Rashid Khan", "role": "Leg-Spin All-Rounder", "nation": "Afghanistan", "rating": 94, "base_price_cr": 2.0, "stats": {"matches": 121, "wickets": 149, "economy": 6.7, "runs": 1120}, "image": "🌀"},
+      {"id": "c5", "name": "Travis Head", "role": "Opening Batter", "nation": "Australia", "rating": 91, "base_price_cr": 2.0, "stats": {"matches": 75, "runs": 2240, "sr": 172.5, "hs": 102}, "image": "🦘"},
+      {"id": "c6", "name": "Sunil Narine", "role": "Spin All-Rounder", "nation": "West Indies", "rating": 90, "base_price_cr": 2.0, "stats": {"matches": 177, "wickets": 180, "economy": 6.6, "runs": 1540}, "image": "🎩"},
+      {"id": "c7", "name": "Pat Cummins", "role": "Fast Bowling Captain", "nation": "Australia", "rating": 93, "base_price_cr": 2.0, "stats": {"matches": 88, "wickets": 102, "economy": 7.8, "runs": 620}, "image": "🏆"},
+      {"id": "c8", "name": "Rishabh Pant", "role": "Wicketkeeper Captain", "nation": "India", "rating": 91, "base_price_cr": 2.0, "stats": {"matches": 111, "runs": 3280, "sr": 148.5, "dismissals": 92}, "image": "🥊"}
+    ]
+  },
+  "football": {
+    "teams": [
+      {"id": "mci", "name": "Manchester City", "short": "MCI", "budget_m": 220.0, "rating": 92, "color": "#6CABDD", "secondary": "#1C2C5B"},
+      {"id": "rma", "name": "Real Madrid", "short": "RMA", "budget_m": 250.0, "rating": 94, "color": "#FFFFFF", "secondary": "#FEBE10"},
+      {"id": "ars", "name": "Arsenal Alexa FC", "short": "ARS", "budget_m": 180.0, "rating": 89, "color": "#EF0107", "secondary": "#063672"},
+      {"id": "bar", "name": "FC Barcelona", "short": "BAR", "budget_m": 160.0, "rating": 90, "color": "#004D98", "secondary": "#A50044"},
+      {"id": "bay", "name": "Bayern Munich", "short": "BAY", "budget_m": 200.0, "rating": 91, "color": "#DC052D", "secondary": "#0066B2"},
+      {"id": "psg", "name": "Paris Saint-Germain", "short": "PSG", "budget_m": 240.0, "rating": 89, "color": "#002B5C", "secondary": "#DA291C"}
+    ],
+    "transfer_market": [
+      {"id": "f1", "name": "Erling Haaland", "role": "Striker (ST)", "nation": "Norway", "rating": 94, "value_m": 180.0, "wages_k": 450, "stats": {"goals": 38, "assists": 7, "pace": 89, "shooting": 93}, "image": "🤖"},
+      {"id": "f2", "name": "Jude Bellingham", "role": "Central Midfielder (CM)", "nation": "England", "rating": 93, "value_m": 160.0, "wages_k": 380, "stats": {"goals": 21, "assists": 14, "passing": 88, "dribbling": 90}, "image": "🌟"},
+      {"id": "f3", "name": "Kylian Mbappé", "role": "Left Winger (LW)", "nation": "France", "rating": 95, "value_m": 190.0, "wages_k": 500, "stats": {"goals": 42, "assists": 11, "pace": 97, "shooting": 92}, "image": "⚡"},
+      {"id": "f4", "name": "Lamine Yamal", "role": "Right Winger (RW)", "nation": "Spain", "rating": 89, "value_m": 120.0, "wages_k": 200, "stats": {"goals": 14, "assists": 18, "pace": 91, "dribbling": 94}, "image": "💎"},
+      {"id": "f5", "name": "Rodri", "role": "Defensive Midfielder (CDM)", "nation": "Spain", "rating": 92, "value_m": 130.0, "wages_k": 320, "stats": {"interceptions": 88, "pass_accuracy": 93.5, "physicality": 89}, "image": "🧠"},
+      {"id": "f6", "name": "Virgil van Dijk", "role": "Center Back (CB)", "nation": "Netherlands", "rating": 90, "value_m": 75.0, "wages_k": 280, "stats": {"tackles": 112, "aerial_won": 89, "defending": 92}, "image": "WALL"}
+    ]
+  },
+  "basketball": {
+    "teams": [
+      {"id": "lal", "name": "LA Lakers", "short": "LAL", "budget_m": 140.0, "rating": 89, "color": "#552583", "secondary": "#FDB927"},
+      {"id": "bos", "name": "Boston Celtics", "short": "BOS", "budget_m": 145.0, "rating": 93, "color": "#007A33", "secondary": "#BA9653"},
+      {"id": "gsw", "name": "Golden State Warriors", "short": "GSW", "budget_m": 150.0, "rating": 88, "color": "#1D428A", "secondary": "#FFC72C"},
+      {"id": "dal", "name": "Dallas Mavericks", "short": "DAL", "budget_m": 135.0, "rating": 90, "color": "#00538C", "secondary": "#002B5E"},
+      {"id": "den", "name": "Denver Nuggets", "short": "DEN", "budget_m": 138.0, "rating": 91, "color": "#0E2240", "secondary": "#FEC524"}
+    ],
+    "draft_pool": [
+      {"id": "b1", "name": "Victor Wembanyama", "role": "Center (C)", "college": "Metropolitans", "rating": 93, "value_m": 35.0, "stats": {"ppg": 24.2, "rpg": 11.5, "bpg": 3.8, "apg": 3.9}, "image": "👽"},
+      {"id": "b2", "name": "Luka Dončić", "role": "Point Guard (PG)", "college": "Real Madrid", "rating": 94, "value_m": 42.0, "stats": {"ppg": 33.9, "rpg": 9.2, "apg": 9.8, "3pm": 3.8}, "image": "🪄"},
+      {"id": "b3", "name": "Shai Gilgeous-Alexander", "role": "Shooting Guard (SG)", "college": "Kentucky", "rating": 92, "value_m": 38.0, "stats": {"ppg": 30.1, "rpg": 5.5, "apg": 6.2, "spg": 2.0}, "image": "🎯"},
+      {"id": "b4", "name": "Cooper Flagg", "role": "Power Forward (PF)", "college": "Duke", "rating": 86, "value_m": 18.0, "stats": {"ppg": 21.0, "rpg": 9.5, "bpg": 2.5, "apg": 4.1}, "image": "🦄"}
+    ]
+  }
+}
